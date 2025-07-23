@@ -1,0 +1,43 @@
+.lesson-navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.lesson-nav-placeholder {
+  width: 150px;
+}
+
+.nav-arrow {
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .lesson-navigation {
+    margin: 30px auto;
+  }
+  
+  .nav-arrow {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lesson-navigation {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .lesson-nav-placeholder {
+    display: none;
+  }
+  
+  .nav-button {
+    width: 100%;
+  }
+} 

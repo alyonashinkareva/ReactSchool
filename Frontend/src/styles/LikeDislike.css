@@ -1,0 +1,98 @@
+.like-dislike-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.rating-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.like-button,
+.dislike-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: white;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.like-button.active {
+  background: #dbeafe;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.dislike-button.active {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.like-icon,
+.dislike-icon {
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.like-icon {
+  transform: scaleX(-1);
+}
+
+.like-button:hover .like-icon {
+  transform: scaleX(-1) scale(1.1);
+}
+
+.dislike-button:hover .dislike-icon {
+  transform: scale(1.1);
+}
+
+.like-button.active .like-icon {
+  stroke: #3b82f6;
+}
+
+.dislike-button.active .dislike-icon {
+  stroke: #ef4444;
+}
+
+.rating-count {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Анимация при клике */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulse-like {
+  0% { transform: scaleX(-1) scale(1); }
+  50% { transform: scaleX(-1) scale(1.2); }
+  100% { transform: scaleX(-1) scale(1); }
+}
+
+.like-button:active .like-icon {
+  animation: pulse-like 0.3s ease;
+}
+
+.dislike-button:active .dislike-icon {
+  animation: pulse 0.3s ease;
+} 

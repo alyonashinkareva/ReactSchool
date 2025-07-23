@@ -1,0 +1,136 @@
+.teacher-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.teacher-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(52, 152, 219, 0.2);
+}
+
+.card-header {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.teacher-photo {
+    height: 100%;
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.8) 0%, 
+        rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+}
+
+.teacher-card:hover .teacher-photo img {
+    transform: scale(1.08);
+}
+
+.teacher-info {
+    position: relative;
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    z-index: 2;
+}
+
+.teacher-role {
+    position: absolute;
+    top: -18px;
+    left: 30px;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    z-index: 3;
+}
+
+.teacher-name {
+    margin: 15px 0 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #2c3e50;
+    transition: color 0.3s;
+}
+
+.teacher-description {
+    margin: 0 0 30px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #7f8c8d;
+    flex-grow: 1;
+}
+
+.teacher-profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: auto;
+    transition: transform 0.3s;
+}
+
+.profile-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3498db;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.profile-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.teacher-card:hover .profile-arrow {
+    transform: translateX(5px);
+    background-color: #2980b9;
+}
+
+.teacher-card:hover .profile-text {
+    color: #2980b9;
+}
+
+.teacher-card:hover .teacher-name {
+    color: #3498db;
+} 

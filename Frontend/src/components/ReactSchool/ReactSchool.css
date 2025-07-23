@@ -1,0 +1,54 @@
+.react-school {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.react-logo {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.react-logo-img {
+  width: 100%;
+  height: 100%;
+  animation: logo-spin infinite 20s linear;
+}
+
+.school-name {
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+}
+
+.school-name-react {
+  color: #61dafb;
+  margin-right: 2px;
+}
+
+.school-name-school {
+  color: #2c3e50;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .react-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .school-name {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,24 @@
+.lesson-content {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 30px 20px;
+}
+
+.lesson-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+@media (max-width: 768px) {
+  .lesson-content {
+    margin: 20px 10px;
+    border-radius: 15px;
+  }
+  
+  .lesson-container {
+    padding: 40px 20px;
+  }
+} 
